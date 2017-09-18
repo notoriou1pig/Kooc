@@ -1,0 +1,7 @@
+// Module declaration with init
+@import "Test" from "in5.kh"
+
+int main()
+{
+ return (0);
+}

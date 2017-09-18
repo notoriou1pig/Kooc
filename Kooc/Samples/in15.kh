@@ -1,0 +1,8 @@
+@class Toto
+{
+        @member {
+                int i;
+                int p;
+                int funcb(int, int, int);
+        }
+}

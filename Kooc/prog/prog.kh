@@ -1,0 +1,53 @@
+@module Calc
+{
+  int res = 0;
+  double res = 0;
+
+  int add(int, int);
+  double add(double, double);
+  void print(int);
+}
+
+@class Animal
+{
+  @member
+    {
+      @virtual void scream();
+    }
+}
+
+@class Prof
+{
+  @member
+    {
+     @virtual void enseigner();
+    }
+}
+
+@class Student
+{
+  @virtual void learn();
+}
+
+@class Koala : Animal, Prof
+{
+  @member
+    {
+      char *color;
+      void setColor(char *);
+      char *whichColor();
+      void scream();
+   }
+}
+
+@class Babouche : Animal, Student
+{
+  @member
+  {
+    char *name;
+
+    void init(char *name);
+    void scream();
+  }
+}
+

@@ -1,0 +1,18 @@
+@class klauss
+ {
+   int a;
+   @member
+   {
+     char b;
+     float c;
+   }
+   double d = 79.2;
+   char **tab;
+   char *str = "dump !";
+   int tab[3] = {1, 2, 3};
+
+   @member   void my_putchar(char);
+   void my_putchar(char);
+}
+
+  int	my_putstr(char *);

@@ -1,0 +1,13 @@
+@class Toto
+{
+        @member {
+                char i;
+                int p;
+                int funcb(int, int, int);
+        }
+}
+
+@module Test
+{
+	char i;
+}

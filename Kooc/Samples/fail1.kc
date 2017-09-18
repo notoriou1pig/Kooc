@@ -1,0 +1,12 @@
+@import "fail1.kh"
+
+int main()
+{
+  Toto *to = [Toto new];
+  int i;
+
+  i = 42;
+  !@(int *)[to->i] = 42;
+  [to funcb :1 :2 :3];
+  return (0);
+}

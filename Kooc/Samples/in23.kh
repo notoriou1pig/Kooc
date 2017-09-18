@@ -1,0 +1,21 @@
+@class Parent1
+{
+	@member
+	{
+		int p1;
+	}
+}
+
+@class Parent2
+{
+	@member
+	{
+		int p2;
+		int test(void);
+	}
+}
+
+@class Son : Parent1, Parent2
+{
+	@member int s;
+}

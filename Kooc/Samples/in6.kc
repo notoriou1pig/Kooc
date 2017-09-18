@@ -1,0 +1,9 @@
+// testing class without members
+
+@import "in6.kh"
+
+int main(void)
+{
+  return 0;
+}
+

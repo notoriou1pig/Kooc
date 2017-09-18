@@ -1,0 +1,21 @@
+// Testing Class member func call syntax1
+@import "in12.kh"
+
+@implementation Toto
+{
+        @member int funcb(int a, int b, int c)
+        {
+                return (a+b+c);
+        }
+}
+
+int main()
+{
+  Toto *to = [Toto new];
+  int i;
+
+  i = 42;
+  !@(int)[to->i] = 42;
+  !@(int)[to funcb :!@(int)[to->i] :!@(int)[to->i] :!@(int)[to->i]];
+  return (0);
+}

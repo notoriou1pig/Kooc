@@ -1,0 +1,27 @@
+// Testing class in func param
+@import "in16.kh"
+
+@implementation Toto
+{
+        @member int funcb(int a, int b, int c)
+        {
+		[self->i] = a;
+                return (a+b+c);
+        }
+}
+
+void test_func(Toto *truc)
+{
+  !@(int)[truc->i] = 42;
+}
+
+int main()
+{
+  Toto *to = [Toto new];
+  int i;
+
+  !@(int)[to->i] = 42;
+  i = 42;
+  !@(int)[Toto funcb :to :!@(int)[to->i] :!@(int)i :!@(int)i];
+  return (0);
+}

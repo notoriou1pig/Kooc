@@ -1,0 +1,8 @@
+// testing inheritance
+
+@import "in8.kh"
+
+int main(void)
+{
+  return 0;
+}

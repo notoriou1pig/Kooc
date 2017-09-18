@@ -1,0 +1,26 @@
+// Testing var without type spec and a unique type solution
+@import "Toto" from "in17.kh"
+@import "Test" from "in17.kh"
+
+@implementation Toto
+{
+        @member int funcb(int a, int b, int c)
+        {
+		[self->i] = a;
+                return (a+b+c);
+        }
+}
+
+@implementation Test
+{
+
+}
+
+int main()
+{
+  Toto *to = [Toto new];
+
+  [to->i] = 42;
+  [Test.i] = 'a';
+  return (0);
+}

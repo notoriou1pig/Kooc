@@ -1,0 +1,39 @@
+// Testing member var use in member func
+@import "in15.kh"
+
+@implementation Toto
+{
+        @member int funcb(int a, int b, int c)
+        {
+		a = [self->i];
+                return (a+b+c);
+        }
+}
+
+void test_func(int osef_man)
+{
+    osef_man += 2;
+    if (42)
+      {
+        osef_man += 4;
+	if (42)
+          {
+            osef_man +=	15;
+          }
+        else
+          {
+            osef_man -= 25;
+          }
+      }
+}
+
+int main()
+{
+  Toto *to = [Toto new];
+  int i;
+
+  i = 42;
+  !@(int)[to->i] = 42;
+  !@(int)[Toto funcb :to :!@(int)[to->i] :!@(int)i :!@(int)i];
+  return (0);
+}

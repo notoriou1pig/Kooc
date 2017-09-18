@@ -1,0 +1,77 @@
+// Testing Cast Son to Parent - 2 - without thunk_function
+
+@import "in22.kh"
+
+@implementation BaseClassA
+{
+  @member void printA(void)
+  {
+    puts("A");
+  }
+}
+
+@implementation BaseClassB
+{
+  @member void printB(void)
+  {
+    puts("B");
+  }
+}
+
+@implementation BaseClassC
+{
+  @member void printC(void)
+  {
+    puts("C");
+  }
+}
+
+@implementation BaseClassD
+{
+  @member void printD(void)
+  {
+    puts("D");
+  }
+}
+
+@implementation BaseClassE
+{
+  @member void printE(void)
+  {
+    puts("E");
+  }
+}
+
+@implementation BaseClassF
+{
+  @member void printF(void)
+  {
+    puts("F");
+  }
+}
+
+@implementation BaseClassG
+{
+  @member void printG(void)
+  {
+    puts("G");
+  }
+}
+
+@implementation Son
+{
+  @member void printSon(void)
+  {
+    puts("Son");
+  }
+}
+
+int main(void)
+{
+  Son *to = [Son new];
+
+  to = (BaseClassA *)to;
+  !@(void)[to printA];
+  !@(void)[Son delete :to];
+  return (0);
+}

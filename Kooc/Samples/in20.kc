@@ -1,0 +1,27 @@
+// Testing typing in func param with one type solution
+@import "Toto" from "in20.kh"
+@import "Test" from "in20.kh"
+
+@implementation Toto
+{
+        @member int funcb(char a, char b, int c)
+        {
+		[self->i] = a;
+                return (a+b+c);
+        }
+}
+
+@implementation Test
+{
+
+}
+
+int main()
+{
+  Toto *to = [Toto new];
+
+  [to->i] = 'q';
+  [Test.i] = 'a';
+  [to funcb :[to->i] :[Test.i] :42];
+  return (0);
+}

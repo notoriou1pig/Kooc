@@ -1,0 +1,59 @@
+@class BaseClassA
+{
+  @member void printA(void);
+}
+
+@class BaseClassB
+{
+  @member void printB(void);
+}
+
+@class BaseClassC : BaseClassA, BaseClassB
+{
+  @member void printC(void);
+}
+
+@class BaseClassD
+{
+  @member void printD(void);
+}
+
+@class BaseClassE
+{
+  @member void printE(void);
+}
+
+@class BaseClassF : BaseClassD, BaseClassE
+{
+  @member void printF(void);
+}
+
+@class BaseClassG
+{
+  @member void printG(void);
+}
+
+@class BaseClassH
+{
+  @member void printH(void);
+}
+
+@class BaseClassI : BaseClassG, BaseClassH
+{
+  @member void printI(void);
+}
+
+@class BaseClassJ : BaseClassC, BaseClassF, BaseClassI
+{
+  @member void printJ(void);
+}
+
+@class BaseClassK
+{
+  @member void printK(void);
+}
+
+@class Son : BaseClassJ, BaseClassK
+{
+  @member void printSon(void);
+}

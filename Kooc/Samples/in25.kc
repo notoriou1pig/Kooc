@@ -1,0 +1,61 @@
+// Testing complex try catch with simultaneous catch
+
+#include <stdio.h>
+#include <stdlib.h>
+
+@import "in25.kh"
+
+@implementation my_exception1
+{
+
+}
+
+@implementation my_exception2
+{
+
+}
+
+@implementation my_exception3
+{
+
+}
+
+
+
+void some_other_func(void)
+{
+	@throw (my_exception3 *)("My_exception3 Error Message");
+}
+
+
+void some_func(void)
+{
+	@try
+	{
+		some_other_func();
+	}
+	@catch (my_exception1 *ex)
+	{
+
+	}
+	@catch (my_exception2 *ex)
+	{
+
+	}
+}
+
+
+int main()
+{
+	@try
+	{
+		some_func();
+	}
+	@catch (my_exception3 *ex)
+	{
+		printf("Catched Exception. Message : %s\n", !@(char *)[ex->msg]);
+		// We must catched this exception for this example
+		return (EXIT_SUCCESS);
+	}
+	return (EXIT_FAILURE);
+}

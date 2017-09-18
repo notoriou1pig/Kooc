@@ -1,0 +1,22 @@
+
+@class BaseClass
+{
+  int a;
+  double a;
+
+  void print(char *a);
+
+  @member {
+    int a;
+    double a;
+
+    @virtual void print(void);
+  }
+}
+
+@class Son: BaseClass
+{
+  @member char a;
+  @member void print(void);
+}
+

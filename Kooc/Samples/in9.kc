@@ -1,0 +1,19 @@
+// Testing module implementation
+@import "in9.kh"
+
+@implementation klauss
+{
+ int my_putchar(char c, float* f)
+  {
+    write(1, &c, 1);
+  }
+ void my_putchar(char c)
+  {
+    write(1, &c, 1);
+  }
+}
+
+int main()
+{
+ return (0);
+}

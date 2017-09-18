@@ -1,0 +1,25 @@
+/*
+**
+** KOOC Exception Declaration
+**
+** DO NOT MODIFY THIS FILE
+**
+** To use the KOOC Exceptions in your program :
+** - Threat the Exception.kh and Exception.kc files with the KOOC
+** - Use the Exception.c and Exception.h files in your project
+** - Create your own Abstract Data Type with a simple inheritance from the Exception class
+** - Threat the file that implements your main() function with the KOOC ( main.kc -> main.c )
+**
+**
+**
+** Made By Pierre BARRIOS
+**
+*/
+
+
+@class	Exception {
+	@member {
+		char *msg;
+		void init(char *);
+	}
+}

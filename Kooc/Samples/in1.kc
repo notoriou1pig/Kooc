@@ -1,0 +1,7 @@
+// Testing basics
+int	main(int agrc, char **argv, char **env)
+{
+  int	i;
+
+  return 0;
+}

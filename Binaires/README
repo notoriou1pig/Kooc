@@ -1,0 +1,4 @@
+Commencer par aller dans votre repertoire a oeuf et supprimer le cnorm*.egg et le pyrser*.egg
+Chez moi le path ressemble a ca :
+/usr/local/lib/python3.3/site-packages/
+Ensuite, Runnez le script d'install.

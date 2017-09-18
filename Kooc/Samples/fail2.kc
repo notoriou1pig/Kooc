@@ -1,0 +1,55 @@
+// Testing a noncatched exception - This test MUST fail
+
+#include <stdio.h>
+#include <stdlib.h>
+
+@import "in26.kh"
+
+@implementation my_exception1
+{
+
+}
+
+@implementation my_exception2
+{
+
+}
+
+@implementation my_exception3
+{
+
+}
+
+
+
+void some_other_func(void)
+{
+	@throw (my_exception3 *)("My_exception3 Error Message");
+}
+
+
+void some_func(void)
+{
+	@try
+	{
+		some_other_func();
+	}
+	@catch (my_exception1 *ex)
+	{
+
+	}
+	@catch (my_exception2 *ex)
+	{
+
+	}
+}
+
+
+int main()
+{
+	@try
+	{
+		some_func();
+	}
+	return (EXIT_FAILURE);
+}

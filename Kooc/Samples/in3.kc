@@ -1,0 +1,7 @@
+// Testing import module 
+@import "mod" from "in3.kh"
+
+int main()
+{
+ return (0);
+}

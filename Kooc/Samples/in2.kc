@@ -1,0 +1,7 @@
+// Testing import file
+@import "in2.kh"
+
+int main()
+{
+  return (0);
+}

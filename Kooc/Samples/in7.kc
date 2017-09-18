@@ -1,0 +1,9 @@
+// testing class with members
+
+@import "in7.kh"
+
+int main(void)
+{
+  return 0;
+}
+

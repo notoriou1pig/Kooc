@@ -1,0 +1,31 @@
+// Testing basic thunk fonction call 
+#include <stdio.h>
+@import "in23.kh"
+@implementation Parent1
+{
+}
+
+@implementation Parent2
+{
+	@member int test()
+	{
+		return (42);
+	}
+}
+
+@implementation Son
+{
+}
+
+int main()
+{
+	Son *s = [Son new];
+	int ret;
+
+	[s->p1] = 1;
+	[s->p2] = 2;
+	[s->s] = 12;
+	ret = [s test];
+
+	return (0);
+}

@@ -1,0 +1,8 @@
+int a;
+
+@module Test
+{
+	int a;
+	double a;
+	float (*toto(int a, char ***b, void (*ptr)(int, int)))(float, float);
+}

@@ -1,0 +1,13 @@
+@import "Exception.kh"
+
+@class my_exception1 : Exception {
+
+}
+
+@class my_exception2 : Exception {
+
+}
+
+@class my_exception3 : Exception {
+
+}

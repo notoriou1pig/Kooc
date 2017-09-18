@@ -1,0 +1,13 @@
+@module klauss
+{
+  int a;
+  float a = 68954.45;
+  char b;
+  double d = 79.2;
+  void **tab;
+  char *str = "dump !";
+  int tab[3] = {1, 2, 3};
+
+  int my_putchar(char, float*);
+  void my_putchar(char);
+}

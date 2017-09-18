@@ -1,0 +1,16 @@
+
+@class SimpleClass
+{
+  int a;
+  double a;
+
+  void print(char *a);
+
+  @member {
+    int a;
+    double a;
+
+    void print(void);
+  }
+}
+

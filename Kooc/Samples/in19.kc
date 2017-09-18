@@ -1,0 +1,130 @@
+// Testing Cast Son to Parent - without thunk_function
+
+@import "in19.kh"
+
+@implementation BaseClassA
+{
+  @member void printA(void)
+  {
+    puts("A");
+  }
+}
+
+@implementation BaseClassB
+{
+  @member void printB(void)
+  {
+    puts("B");
+  }
+}
+
+@implementation BaseClassC
+{
+  @member void printC(void)
+  {
+    puts("C");
+  }
+}
+
+@implementation BaseClassD
+{
+  @member void printD(void)
+  {
+    puts("D");
+  }
+}
+
+@implementation BaseClassE
+{
+  @member void printE(void)
+  {
+    puts("E");
+  }
+}
+
+@implementation BaseClassF
+{
+  @member void printF(void)
+  {
+    puts("F");
+  }
+}
+
+@implementation BaseClassG
+{
+  @member void printG(void)
+  {
+    puts("G");
+  }
+}
+
+@implementation BaseClassH
+{
+  @member void printH(void)
+  {
+    puts("H");
+  }
+}
+
+@implementation BaseClassI
+{
+  @member void printI(void)
+  {
+    puts("I");
+  }
+}
+
+@implementation BaseClassJ
+{
+  @member void printJ(void)
+  {
+    puts("J");
+  }
+}
+
+@implementation BaseClassK
+{
+  @member void printK(void)
+  {
+    puts("K");
+  }
+}
+
+@implementation Son
+{
+  @member void printSon(void)
+  {
+    puts("Son");
+  }
+}
+
+int main(void)
+{
+  Son *to = [Son new];
+
+  to = (BaseClassA *)to;
+  !@(void)[to printA];
+  to = (BaseClassB *)to;
+  !@(void)[to printB];
+  to = (BaseClassC *)to;
+  !@(void)[to printC];
+  to = (BaseClassD *)to;
+  !@(void)[to printD];
+  to = (BaseClassE *)to;
+  !@(void)[to printE];
+  to = (BaseClassF *)to;
+  !@(void)[to printF];
+  to = (BaseClassG *)to;
+  !@(void)[to printG];
+  to = (BaseClassH *)to;
+  !@(void)[to printH];
+  to = (BaseClassI *)to;
+  !@(void)[to printI];
+  to = (BaseClassJ *)to;
+  !@(void)[to printJ];
+  to = (BaseClassK *)to;
+  !@(void)[to printK];
+  to = (Son *)to;
+  !@(void)[to printSon];
+  return (0);
+}

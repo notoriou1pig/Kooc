@@ -1,0 +1,119 @@
+
+#include <string.h>
+#include <stdio.h>
+
+@import "Calc" from "prog.kh"
+@import "Animal" from "prog.kh"
+@import "Prof" from "prog.kh"
+@import "Koala" from "prog.kh"
+@import "Babouche" from "prog.kh"
+
+@implementation Animal {
+  @member void scream()
+  {
+    printf("(unkown animal type)");
+  }
+}
+
+@implementation Calc
+{
+  int add(int a, int b)
+  {
+    !@(int)[Calc.res] = a + b;
+    printf("adding int\n");
+    return !@(int)[Calc.res];
+  }
+
+  double add(double a, double b)
+  {
+    !@(double)[Calc.res] = a + b;
+    printf("adding double\n");
+    return !@(double)[Calc.res];
+  }
+
+  void print(int type)
+  {
+    if (type)
+    {
+      printf("int = %d\n", !@(int)[Calc.res]);
+    }
+    else
+    {
+      printf("double = %f\n", !@(double)[Calc.res]);
+    }
+  }
+}
+
+@implementation Prof
+{
+  @member void enseigner()
+  {
+    printf("A great power comes with a great responsibility !\n");
+  }
+}
+
+@implementation Student
+{
+  @member void learn()
+  {
+    printf("I love junk food !");
+  }
+}
+
+@implementation Koala
+{
+  @member void setColor(char * color)
+  {
+    [self->color] = strdup(color);
+  }
+
+  @member char *whichColor()
+  {
+    char *tmp = [self->color];
+
+    return tmp;
+  }
+
+  @member void scream()
+  {
+    printf("GROAAAR\n");
+  }
+}
+
+@implementation Babouche
+{
+  @member void init(char *_name)
+  {
+    [self->name] = strdup(_name);
+  }
+
+  @member void scream()
+  {
+    printf("%s says : beeeuuuuhet !\n", !@(char*)[self->name]);
+  }
+}
+
+int	main()
+{
+  // MODULE
+  printf("%d + %d = %d\n", 42, 42, !@(int)[Calc add :!@(int)42 :!@(int)42]);
+  !@(void)[Calc print :1];
+  printf("\n");
+  printf("%f + %f = %f\n", 42.2, 42.2, !@(double)[Calc add :!@(double)42.2 :!@(double)42.2]);
+  !@(void)[Calc print :0];
+  // CLASS
+  Koala * k = [Koala new];
+  Koala * l = [Koala new];
+  Babouche * anonyme = [Babouche new: !@(char*)"undisclosed identity"];
+  [k setColor: !@(char*)"black and white"];
+  [l setColor: !@(char*)"red and blue"];
+
+  printf("k is %p and l is %p\n", !@(char*)[k whichColor], !@(char*)[l whichColor]);
+  printf("k is %s and l is %s\n", !@(char*)[k whichColor], !@(char*)[l whichColor]);
+  !@(void)[k scream];
+  !@(void)[l scream];
+
+  !@(void)[k enseigner];
+  !@(void)[anonyme scream];
+  return 0;
+}

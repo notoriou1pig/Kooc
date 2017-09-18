@@ -1,0 +1,8 @@
+@class klaus
+{
+  @member
+  {
+    int	  my_putchar();
+    int	  my_putchar2();
+  }
+}

@@ -1,0 +1,20 @@
+// Testing @member{} in @implementation
+
+@import "in21.kh"
+
+@implementation klaus {
+  @member
+    {
+      int my_putchar()
+      {   
+      }
+      int my_putchar2()
+      {
+      }
+    }
+}
+
+int main(void)
+{
+  return 0;
+}

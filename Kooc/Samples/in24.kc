@@ -1,0 +1,34 @@
+// Testing basic try catch example with a message
+
+#include <stdio.h>
+#include <stdlib.h>
+
+@import "in24.kh"
+
+@implementation my_exception
+{
+
+}
+
+
+void	some_func(void)
+{
+	@throw (my_exception *)("An error occured");
+}
+
+
+int main()
+{
+	@try
+	{
+		some_func();
+	}
+	@catch (my_exception *ex)
+	{
+		printf("Catched Exception. Message : %s\n", !@(char *)[ex->msg]);
+	
+		// We must catched this exception for this example
+		return (EXIT_SUCCESS);
+	}
+	return (EXIT_FAILURE);
+}

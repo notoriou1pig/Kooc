@@ -1,0 +1,7 @@
+// Module declaration 
+@import "Test" from "in4.kh"
+
+int main()
+{
+ return (0);
+}

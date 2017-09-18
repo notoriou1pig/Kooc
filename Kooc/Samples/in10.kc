@@ -1,0 +1,19 @@
+// Testing class implementation
+@import "in10.kh"
+
+@implementation klauss
+{
+@member void my_putchar(char c)
+  {
+    write(1, &c, 1);
+  }
+ void my_putchar(char c)
+  {
+    write(1, &c, 1);
+  }
+}
+
+int main()
+{
+ return (0);
+}

@@ -1,0 +1,9 @@
+
+@class SimpleClass
+{
+  int a;
+  double a;
+
+  void print(char *a);
+}
+
